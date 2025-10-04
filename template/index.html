@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge PDF online:Combine PDF</title>
+    <link rel="stylesheet" href="/output.css">
+    <!-- didn't uses absolute path because sever automaticallty serves the file -->
+    <!-- <link rel="stylesheet" href="public/output.css">   -->
+</head>
+
+<body>
+    <header class=" sticky top-0 z-10">
+        <nav class="h-5">
+            <div class="flex justify-between border border-gray-200 pt-4 pb-1 bg-white">
+
+                <div class="flex-center">
+                    <div class=" border-gray-200 border-r w-28 ">
+                        <img src="/images/adobe_image.png" alt="logo" class="w-24 h-10 px-3 ml-4 cursor-pointer"
+                            loading="lazy">
+                    </div>
+                    <div class="px-5">
+                        <select name="PDF's & signatures" class="text-[13px] cursor-pointer">
+                            <option>PDF's & signatures</option>
+                        </select>
+                    </div>
+                    <div class="flex-center gap-5 text-[12px] cursor-pointer">
+                        <p class=" ease-in-out duration-300 hover:text-blue-600">Tools</p>
+                        <select class="cursor-pointer">
+                            <option>Convert</option>
+                        </select>
+
+                        <select class="font-bold border-b-[3px] cursor-pointer">
+                            <option>Edit</option>
+                        </select>
+
+                        <select class="cursor-pointer">
+                            <option>Sign & Protect</option>
+                        </select>
+
+                        <select class="cursor-pointer">
+                            <option>Generative AI</option>
+                        </select>
+                        <p class=" ease-in-out duration-300 hover:text-blue-600 cursor-pointer">Buy now</p>
+                    </div>
+                    <button class="ml-5 button text-white bg-blue-600 hover:bg-blue-700 cursor-pointer"
+                        type="button">Free
+                        trial</button>
+                </div>
+
+                <div class="flex-center gap-4 mr-10 ">
+                    <button class="button border-gray-400 text-gray-500 hover:bg-gray-200 cursor-pointer text-[13px]"
+                        type="button">Go
+                        to
+                        Acrobat</button>
+                    <div class="cursor-pointer hover:bg-gray-100 duration-500 ease-in-out ">
+                        <img src="/images/dots-image.png" alt="more" class="w-6" loading="lazy">
+                    </div>
+                    <button type="button"
+                        class="button border-gray-400 text-gray-500 hover:bg-gray-100 cursor-pointer text-[13px]">Sign
+                        in</button>
+                </div>
+            </div>
+
+            <div class="flex gap-3 text-gray-400 bg-white">
+                <p class="text-[13px] hover-text-bottom cursor-pointer ml-8">Home</p>
+                <p>/</p>
+                <p class="text-[13px] hover-text-bottom before:left-[97px] before:w-[45px] cursor-pointer">Acrobat</p>
+                <p>/</p>
+                <p class="text-[13px] text-black ">Merge PDF</p>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class=" border-none bg-linear-180 from-red-600 to-white ">
+            <div class="w-full h-20 "></div>
+            <div class="flex items-center justify-around bg-white my-10 mx-40 border-dashed border-2 py-33 border-gray-300 hover:border-gray-600 rounded-2xl cursor-pointer"
+                id="inputFileClicked">
+                <form method="post" action="/merge" enctype="multipart/form-data" class="hidden">
+                    <input type="file" multiple name="pdfs" id="inputFile">
+                    <button type="submit" id="auto-click"></button>
+                </form>
+                <div>
+                    <div class="flex gap-5 ">
+                        <img src="/images/pdf_logo.png" class="w-13 h-12" alt="image" loading="lazy">
+                        <h4 class="flex-center text-[40px] font-bold ">Adobe Acrobat</h4>
+                    </div>
+                    <h1 class="text-[45px] font-bold mt-6 ">Merge PDF files</h1>
+                    <p class="w-120 mt-6 text-[17px]">Drag and drop PDFs to merge them into one file with our PDF
+                        combiner.
+                    </p>
+                    <button class="button bg-blue-500 border-none flex-center mt-8 cursor-pointer" type="button">
+                        <img src="/images/input-image.png" alt="input-file" class="w-12 inline" loading="lazy">
+                        <p class="inline text-white text-[17px]">Select files</p>
+                    </button>
+                </div>
+                <div class="mr-40">
+                    <img src="/images/pdf_download_logo.png" alt="pdf download" class="w-65" loading="lazy">
+                </div>
+            </div>
+
+            <div class="flex-center gap-4 ">
+                <img src="/images/proctection-sign.png" alt="proctection-sign" class="w-10" loading="lazy">
+                <div class=" w-135 text-[12.5px]">
+                    <p class="inline ">Your file will be securely handled by Adobe servers and deleted unless you sign
+                        in to save it. By using this service, you agree to the Adobe</p>
+                    <a class="inline text-blue-500 underline cursor-pointer"
+                        href="https://www.adobe.com/legal/terms.html" target="_blank">Terms of Use</a>
+                    <p class="inline"> and acknowledge the </p>
+                    <a class="inline text-blue-500 underline cursor-pointer" target="_blank"
+                        href="https://www.adobe.com/privacy/policy.html">Privacy Policy.</a>
+                </div>
+                <div class="hover-information">
+                    <img src="/images/information-sign.png" alt="information-sign" class="w-7 cursor-pointer"
+                        loading="lazy">
+                </div>
+            </div>
+    </main>
+
+
+    <div class="bg-gray-50 mt-20 ">
+        <div class="pt-15 flex-center flex-col">
+            <p class="font-bold text-xl ">Over 20M* files uploaded!</p>
+            <p class="font-bold text-xl">Join millions of users who have successfully merged PDFs using Acrobat.</p>
+            <p class="font-bold text-[14px] mt-4">*Over an 18-24 month period.</p>
+        </div>
+
+
+        <section id="how_to_merge_PDF">
+            <div class=" ml-70 mt-24">
+                <h2 class="text-[30px] font-bold">How to merge PDF files online</h2>
+                <p class="mt-4">Learn how to combine multiple PDF files into one with these easy steps:</p>
+            </div>
+
+            <div class="flex-center gap-15 pb-10">
+
+                <ol class="mt-15 ml-50 mb-20 ">
+                    <li class="list-text">
+                        <p class=" font-bold text-3xl">1</p>
+                        <div>
+                            <p class="inline">Click the</p>
+                            <p class="inline font-bold"> Select files</p>
+                            <p class="inline"> button above, or drag and drop files into
+                                the drop zone.</p>
+                        </div>
+                    </li>
+
+                    <li class="list-text">
+                        <p class="font-bold text-3xl">2</p>
+                        <p>Select the files you want to merge using the Acrobat PDF combiner tool.</p>
+                    </li>
+
+                    <li class="list-text">
+                        <p class="font-bold text-3xl">3</p>
+                        <p>Reorder the files if needed.</p>
+                    </li>
+
+                    <li class="list-text">
+                        <p class="font-bold text-3xl">4</p>
+                        <div>
+                            <p class="inline">Click</p>
+                            <p class="inline font-bold"> Merge files.</p>
+                        </div>
+                    </li>
+
+                    <li class="list-text">
+                        <p class="font-bold text-3xl">5</p>
+                        <p>Sign in to download or share the merged file. You can organize the pages too.</p>
+                    </li>
+                </ol>
+                <div class="mt-30 ">
+                    <iframe width="560" loading="lazy" height="315"
+                        src="https://www.youtube.com/embed/1Lh9GJRt00k?si=pbYPKSUJqO4dtitM" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="ml-45 mt-20">
+        <div class="text-3xl font-bold mb-20 ">
+            <h3>Combine PDF files anytime, anywhere</h3>
+        </div>
+        <div class="flex flex-wrap gap-x-10 gap-y-20 items-center">
+            <article class="file-card">
+                <img src="/images/combine-file-1.png" alt="image" class="w-13" loading="lazy">
+                <h4 class="font-bold">Merge PDFs online on any device</h4>
+                <p>It's quick and easy to merge PDF files into a single document with the Adobe Acrobat online tool. It
+                    works on any device and with any web browser, such as Microsoft Edge or Google Chrome.</p>
+            </article>
+            <article class="file-card">
+                <img src="/images/combine-file-2.png" alt="image" class="w-16 " loading="lazy">
+                <h4 class="font-bold">Combine PDF files to simplify your work</h4>
+                <p>Merging multiple files into one PDF lets you store and review them more easily. You can also share
+                    files with others more efficiently by emailing a link to a single, merged PDF file.</p>
+            </article>
+            <article class="file-card">
+                <img src="/images/combine-file-3.png" alt="image" class="w-16 " loading="lazy">
+                <h4 class="font-bold">Organize your online PDF</h4>
+                <p>After you combine PDF files, simply sign in to organize individual pages. You can move, add, delete,
+                    or rotate PDF pages as needed until you’ve created the perfect document.</p>
+            </article>
+            <article class="file-card">
+                <img src="/images/combine-file-4.png" alt="image" class="w-16 " loading="lazy">
+                <h4 class="font-bold">Download your file or share it</h4>
+                <p>You can download the merged PDF file with a click or by signing in. You can also share your new file
+                    with a friend or colleague when you sign in.</p>
+            </article>
+            <article class="file-card">
+                <img src="/images/combine-file-5.png" alt="image" class="w-16 " loading="lazy">
+                <h4 class="font-bold">Works on Mac, Windows and Linux</h4>
+                <p>Learn how to merge PDF files not just in any browser, but also on all major operating systems, such
+                    as Mac, Windows, Linux or a mobile OS.</p>
+            </article>
+            <article class="file-card">
+                <img src="/images/combine-file-6.png" alt="image" class="w-16 " loading="lazy">
+                <h4 class="font-bold">Combine PDFs safely and securely</h4>
+                <p>Adobe invented the PDF file format, making our PDF tools highly trusted. Your files are handled
+                    securely by our servers and deleted permanently unless you sign in and save them.</p>
+            </article>
+        </div>
+    </div>
+
+
+    <section class="flex flex-col mt-20 w-full bg-gray-50 pb-20" id="merge_PDF_question_ans">
+        <div class="my-15 text-4xl font-bold text-gray-700 ml-65">
+            <h4>Merge PDF FAQs.</h4>
+        </div>
+        <ol class="w-[970px] ml-65">
+            <li class="merge-pdf-faqs" id="merge_pdf_question_1" data-id="1">
+                <div class="py-6 border-l-blue-600" id="merge-pdf-border-blue-1">
+                    <p class="inline ml-5">In what order will my merged PDF files apper?</p>
+                    <p class="text-2xl cursor-pointer inline ml-144 transition-transform duration-300"
+                        id="merge-pdf-q-1">+</p>
+                </div>
+                <p class="bg-gray-50 py-4 font-normal text-black hidden" id="merge-pdf-ans-1">Once you add the files
+                    you'd like to combine, you can drag and drop them into your preferred order. The top file in
+                    your list will appear first in the merged PDF file.</p>
+            </li>
+            <li class="merge-pdf-faqs border-t-0" id="merge_pdf_question_2" data-id="2">
+                <div class="py-6 border-l-blue-600" id="merge-pdf-border-blue-2">
+                    <p class="inline ml-5">How many pages can I include in a merged PDF?</p>
+                    <p class="text-2xl cursor-pointer inline ml-140 transition-transform duration-300"
+                        id="merge-pdf-q-2">+</p>
+                </div>
+                <p class="bg-gray-50 py-4 font-normal text-black hidden" id="merge-pdf-ans-2">The Acrobat Merge PDFs
+                    tool lets you create a merged, single PDF document of up to 1,500 pages. You can combine up to 100
+                    files, with each individual file limited to 500 pages.</p>
+            </li>
+            <li class="merge-pdf-faqs border-t-0" id="merge_pdf_question_3" data-id="3">
+                <div class="py-6 border-l-blue-600" id="merge-pdf-border-blue-3">
+                    <p class="inline ml-5">Can I delete and reorder pages after I merge files?</p>
+                    <p class="text-2xl cursor-pointer inline ml-137 transition-transform duration-300"
+                        id="merge-pdf-q-3">+</p>
+                </div>
+                <div class="space-y-6 hidden " id="merge-pdf-ans-3">
+                    <p class="text-base leading-relaxed font-normal bg-gray-50 py-4 text-black ">
+                        When you combine PDF files, you can reorder, add, or delete files before you merge them into a
+                        single document. Sign in if you need to <a href="#" class="text-blue-600 underline">reorganize
+                            individual pages</a> in your merged PDF. You can add, delete, move, or <a href="#"
+                            class="text-blue-600 underline">rotate PDF pages</a> as needed until your content is in the
+                        desired order.
+                        <br><br>
+                        You can also start an <a href="#" class="text-blue-600 underline">Adobe Acrobat Pro</a> 7-day
+                        free trial to create PDFs, edit PDFs, add page numbers, insert bookmarks or watermarks, <a
+                            href="#" class="text-blue-600 underline">split PDF files</a>, <a href="#"
+                            class="text-blue-600 underline">secure PDFs with passwords</a>, convert PNG and other image
+                        files to and from PDF, and convert PDFs to and from Microsoft PowerPoint, Excel, and Word
+                        documents.
+                    </p>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <section id="merge_PDF_resources">
+        <h4 class="my-8 ml-25 font-bold text-3xl text-gray-800">Merge PDF resources</h4>
+        <article id="merge-pdf-resources" class="flex gap-15 justify-center mb-20">
+
+            <aside class="card add-adobe-logo" id="know-more-about-tools">
+                <div class="hover:brightness-75 duration-300 ease-in-out">
+                    <div>
+                        <img src="/images/merge-pdf-resources-1.jpeg" alt="resource-image" loading="lazy" width="280px"
+                            class="rounded-t-lg">
+                    </div>
+                    <h5 class="font-bold px-4 ">Combine PDFs in Linux with these merging methods.</h5>
+                    <p class="px-4 ">You can easily combine and merge PDF files in the Linux operating system with this
+                        online
+                        tool. Learn how with these...</p>
+                    <button class="button p-1 ml-[180px]" type="button">Read now</button>
+                </div>
+            </aside>
+
+            <aside class="card add-adobe-logo" id="know-more-about-tools">
+                <div class="hover:brightness-75 duration-300 ease-in-out">
+                    <div>
+                        <img src="/images/merge-pdf-resources-2.jpeg" alt="resource-image" loading="lazy" width="280px"
+                            class="rounded-t-lg">
+                    </div>
+                    <h5 class="px-4 font-bold">How to merge PDF files on a Mac.</h5>
+                    <p class="px-4 ">Learn how to combine multiple PDF files into one convenient document in just a few
+                        simple
+                        steps.</p>
+                    <button class="button p-1 ml-[180px]" type="button">Read now</button>
+                </div>
+            </aside>
+
+            <aside class="card add-adobe-logo" id="know-more-about-tools">
+                <div class="hover:brightness-75 duration-300 ease-in-out">
+                    <div>
+                        <img src="/images/merge-pdf-resources-3.jpeg" alt="resource-image" loading="lazy" width="280px"
+                            class="rounded-t-lg">
+                    </div>
+                    <h5 class="px-4 font-bold">How to merge PDF files in Windows 10.</h5>
+                    <p class="px-4 ">Wondering how to combine PDF files in Windows 10 to organize your home life or
+                        office
+                        space?
+                        Our guide will show you how...</p>
+                    <button class="button p-1 ml-[180px]" type="button">Read now</button>
+                </div>
+            </aside>
+
+            <aside class="card add-adobe-logo" id="know-more-about-tools">
+                <div class="hover:brightness-75 duration-300 ease-in-out">
+                    <div>
+                        <img src="/images/merge-pdf-resources-4.jpeg" alt="resource-image" loading="lazy" width="280px"
+                            class="rounded-t-lg">
+                    </div>
+                    <h5 class="px-4 font-bold">Guide to team collaboration for remote teams.</h5>
+                    <p class="px-4 ">Boost your team’s productivity with remote work collaboration tools. Find the best
+                        tools and
+                        tips to enhance your...</p>
+                    <button class="button p-1 ml-[180px]" type="button">Read now</button>
+                </div>
+            </aside>
+        </article>
+
+
+        <section id="sign-in-section" class="flex-center gap-30 my-15">
+            <div id="image">
+                <img src="/images/left-section-pdf-image.png" alt=" image" loading="lazy">
+            </div>
+            <aside id="create-free-account">
+                <h5 class="font-bold text-3xl text-gray-700">Use Acrobat tools for free</h5>
+                <ul class="my-5 ">
+                    <li type="disc">Sign in to try 25+ tools, like convert or compress</li>
+                    <li type="disc">Add comments, fill in forms, and sign PDFs for free</li>
+                    <li type="disc">Store your files online to access from any device</li>
+                </ul>
+                <a href="https://auth.services.adobe.com/en_US/index.html">
+                    <button type="button" class="button text-white font-bold bg-blue-600 cursor-pointer">Create a free
+                        account</button>
+                </a>
+                <a href="https://auth.services.adobe.com/en_US/index.html"
+                    class="text-blue-600 underline font-bold ml-5">Sign in</a>
+            </aside>
+        </section>
+
+
+        <section id="review-section" class="bg-gray-50 flex-center py-22 gap-4 relative">
+            <h6 class="font-bold text-[19px] text-gray-700">Rate your experience</h6>
+            <div class="rateExperience flex" id="reviewRating">
+                <label data-id="1"
+                    class="star fill-transparent hover-review hover:before:content-['poor'] after:left-[713px]">
+
+                    <svg viewBox="0 0 24 24" class=" w-[30px] h-[30px] stroke-gray-700">
+                        <path
+                            d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.12 5.11a.56.56 0 0 0 .48.35l5.52.44c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 0 0-.18.56l1.28 5.39a.56.56 0 0 1-.84.61l-4.73-2.89a.56.56 0 0 0-.59 0L6.98 20.54a.56.56 0 0 1-.84-.61l1.29-5.39a.56.56 0 0 0-.18-.56l-4.2-3.6a.56.56 0 0 1 .32-.99l5.52-.44a.56.56 0 0 0 .48-.35L11.48 3.5Z" />
+                    </svg>
+                </label>
+                <label data-id="2"
+                    class="star fill-transparent hover-review hover:before:content-['Below_Average'] after:left-[743px]">
+                    <svg viewBox="0 0 24 24" class="w-[30px] h-[30px] stroke-gray-700">
+                        <path
+                            d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.12 5.11a.56.56 0 0 0 .48.35l5.52.44c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 0 0-.18.56l1.28 5.39a.56.56 0 0 1-.84.61l-4.73-2.89a.56.56 0 0 0-.59 0L6.98 20.54a.56.56 0 0 1-.84-.61l1.29-5.39a.56.56 0 0 0-.18-.56l-4.2-3.6a.56.56 0 0 1 .32-.99l5.52-.44a.56.56 0 0 0 .48-.35L11.48 3.5Z" />
+                    </svg>
+                </label>
+                <label data-id="3"
+                    class="star fill-transparent hover-review hover:before:content-['Good'] after:left-[773px]">
+                    <svg viewBox="0 0 24 24" class="w-[30px] h-[30px] stroke-gray-700">
+                        <path
+                            d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.12 5.11a.56.56 0 0 0 .48.35l5.52.44c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 0 0-.18.56l1.28 5.39a.56.56 0 0 1-.84.61l-4.73-2.89a.56.56 0 0 0-.59 0L6.98 20.54a.56.56 0 0 1-.84-.61l1.29-5.39a.56.56 0 0 0-.18-.56l-4.2-3.6a.56.56 0 0 1 .32-.99l5.52-.44a.56.56 0 0 0 .48-.35L11.48 3.5Z" />
+                    </svg>
+                </label>
+                <label data-id="4"
+                    class="star fill-transparent hover-review hover:before:content-['Very_Good'] after:left-[803px]">
+                    <svg viewBox="0 0 24 24" class="w-[30px] h-[30px] stroke-gray-700">
+                        <path
+                            d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.12 5.11a.56.56 0 0 0 .48.35l5.52.44c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 0 0-.18.56l1.28 5.39a.56.56 0 0 1-.84.61l-4.73-2.89a.56.56 0 0 0-.59 0L6.98 20.54a.56.56 0 0 1-.84-.61l1.29-5.39a.56.56 0 0 0-.18-.56l-4.2-3.6a.56.56 0 0 1 .32-.99l5.52-.44a.56.56 0 0 0 .48-.35L11.48 3.5Z" />
+                    </svg>
+                </label>
+                <label data-id="5"
+                    class="star fill-transparent hover-review hover:before:content-['OutStanding'] after:left-[833px]">
+                    <svg viewBox="0 0 24 24" class="w-[30px] h-[30px] stroke-gray-700">
+                        <path
+                            d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.12 5.11a.56.56 0 0 0 .48.35l5.52.44c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 0 0-.18.56l1.28 5.39a.56.56 0 0 1-.84.61l-4.73-2.89a.56.56 0 0 0-.59 0L6.98 20.54a.56.56 0 0 1-.84-.61l1.29-5.39a.56.56 0 0 0-.18-.56l-4.2-3.6a.56.56 0 0 1 .32-.99l5.52-.44a.56.56 0 0 0 .48-.35L11.48 3.5Z" />
+                    </svg>
+                </label>
+            </div>
+            <fieldset class=" flex flex-col border-2 border-gray-400 rounded-sm " hidden id="reviewSectionFieldset">
+                <label for="experienceReview" class="pl-1 italic text-gray-500 font-semibold">Please give your
+                    feedback</label>
+                <textarea id="experienceReview" cols="32" rows="2" maxlength="500"
+                    class="italic resize-none text-sm p-1 outline-none "></textarea>
+                <div class="flex justify-between mx-2">
+                    <span class="font-semibold text-gray-500 text-sm">
+                        <p id="ReminingText" class="inline">500</p>/500
+                    </span>
+                    <button type="button" id="sendReviewBtn" class="font-semibold text-gray-400">Send</button>
+                </div>
+            </fieldset>
+            <h6 class="text-gray-500 font-semibold">
+                <p class="inline font-bold text-gray-600">4.8/5</p> - 293382 votes
+            </h6>
+        </section>
+
+        <hr class="text-gray-300">
+
+        <h4 class="bold flex flex-center text-3xl font-bold py-10 pt-20 text-gray-700 bg-gray-50">Try these Acrobat
+            online tools</h4>
+
+        <section class="w-full px-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 bg-gray-50">
+            <!-- Convert from PDF -->
+            <section aria-labelledby="convert-from">
+                <h2 id="convert-from" class="font-semibold text-lg mb-4">Convert from PDF</h2>
+                <ul class="space-y-3 underline">
+                    <li><a href="#" class="flex items-center gap-2 hover:text-blue-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <rect x="3" y="3" width="18" height="18" stroke-width="2" /><text x="7" y="16"
+                                    font-size="8" fill="currentColor">W</text>
+                            </svg>
+                            PDF to Word converter</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-pink-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-pink-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke-width="2" /><text x="6" y="16" font-size="7"
+                                    fill="currentColor">JPG</text>
+                            </svg>
+                            PDF to JPG image</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-green-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <rect x="3" y="3" width="18" height="18" stroke-width="2" /><text x="6" y="16"
+                                    font-size="8" fill="currentColor">X</text>
+                            </svg>
+                            PDF to Excel spreadsheet</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-orange-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke-width="2" /><text x="7" y="16" font-size="8"
+                                    fill="currentColor">P</text>
+                            </svg>
+                            PDF to PowerPoint</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-red-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <rect x="4" y="4" width="16" height="16" stroke-width="2" /><text x="5" y="16"
+                                    font-size="7" fill="currentColor">PDF</text>
+                            </svg>
+                            General PDF converter</a></li>
+                </ul>
+            </section>
+            <!-- Convert to PDF -->
+            <section aria-labelledby="convert-to">
+                <h2 id="convert-to" class="font-semibold text-lg mb-4">Convert to PDF</h2>
+                <ul class="space-y-3 underline">
+                    <li><a href="#" class="flex items-center gap-2 hover:text-blue-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <rect x="3" y="3" width="18" height="18" stroke-width="2" /><text x="7" y="16"
+                                    font-size="8" fill="currentColor">W</text>
+                            </svg>
+                            Word to PDF</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-pink-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-pink-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke-width="2" /><text x="6" y="16" font-size="7"
+                                    fill="currentColor">JPG</text>
+                            </svg>
+                            JPG to PDF</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-purple-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <rect x="4" y="4" width="16" height="16" stroke-width="2" /><text x="5" y="16"
+                                    font-size="7" fill="currentColor">PNG</text>
+                            </svg>
+                            PNG to PDF</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-green-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <rect x="3" y="3" width="18" height="18" stroke-width="2" /><text x="6" y="16"
+                                    font-size="8" fill="currentColor">X</text>
+                            </svg>
+                            Excel to PDF</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-orange-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke-width="2" /><text x="7" y="16" font-size="8"
+                                    fill="currentColor">P</text>
+                            </svg>
+                            PPT to PDF</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-green-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M5 12h14M12 5v14" stroke-width="2" />
+                            </svg>
+                            OCR PDF (scan to text)</a></li>
+                </ul>
+
+                <h2 class="font-semibold text-lg mt-6 mb-4">Reduce file size</h2>
+                <ul class="underline">
+                    <li><a href="#" class="flex items-center gap-2 hover:text-cyan-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-cyan-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M4 12h16M12 4v16" stroke-width="2" />
+                            </svg>
+                            Compress PDF online</a></li>
+                </ul>
+            </section>
+
+            <!-- Edit PDFs -->
+            <section class="my-10">
+                <h2 id="edit-pdf" class="font-semibold text-lg mb-4">Edit PDF</h2>
+                <ul class="space-y-3 underline">
+                    <li><a href="#" class="flex items-center gap-2 hover:text-yellow-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M3 21v-4l12-12 4 4-12 12H3z" stroke-width="2" />
+                            </svg>
+                            Edit PDF file</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-blue-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M4 12h16" stroke-width="2" />
+                            </svg>
+                            Merge multiple PDFs</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-red-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M6 4h12M6 20h12" stroke-width="2" />
+                            </svg>
+                            Split PDF pages</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-blue-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <rect x="4" y="4" width="16" height="16" stroke-width="2" />
+                            </svg>
+                            Crop PDF pages</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-purple-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M6 6l12 12M6 18L18 6" stroke-width="2" />
+                            </svg>
+                            Delete PDF pages</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-green-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M12 2v20M2 12h20" stroke-width="2" />
+                            </svg>
+                            Rotate PDF pages</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-pink-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-pink-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" />
+                            </svg>
+                            Reorder PDF pages</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-blue-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M6 4h12v16H6z" stroke-width="2" />
+                            </svg>
+                            Extract PDF pages</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-orange-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M12 4v16M4 12h16" stroke-width="2" />
+                            </svg>
+                            Insert new pages</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-yellow-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor"><text x="4" y="16" font-size="10"
+                                    fill="currentColor">#</text></svg>
+                            Number PDF pages</a></li>
+                </ul>
+            </section>
+
+            <!-- Sign & Protect -->
+            <section aria-labelledby="sign-protect">
+                <h2 id="sign-protect" class="font-semibold text-lg mb-4">Sign & Protect PDF</h2>
+                <ul class="space-y-3 underline">
+                    <li><a href="#" class="flex items-center gap-2 hover:text-purple-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M4 20h16M4 12l8-8 8 8" stroke-width="2" />
+                            </svg>
+                            Fill & Sign PDF</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-pink-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-pink-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M12 2l4 4-4 4-4-4z" stroke-width="2" />
+                            </svg>
+                            Request e-signatures</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-blue-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <rect x="6" y="10" width="12" height="10" stroke-width="2" />
+                                <path d="M8 10V7a4 4 0 018 0v3" stroke-width="2" />
+                            </svg>
+                            Password protect PDF</a></li>
+                </ul>
+
+                <h2 class="font-semibold text-lg mt-6 mb-4">Generative AI</h2>
+                <ul class="space-y-3 underline">
+                    <li><a href="#" class="flex items-center gap-2 hover:text-purple-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke-width="2" />
+                                <path d="M8 12h8M8 8h8M8 16h8" stroke-width="2" />
+                            </svg>
+                            Chat with PDF</a></li>
+                    <li><a href="#" class="flex items-center gap-2 hover:text-purple-600">
+                            <svg aria-hidden="true" class="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M4 4h16v16H4z" stroke-width="2" />
+                                <line x1="8" y1="8" x2="16" y2="8" stroke-width="2" />
+                                <line x1="8" y1="12" x2="16" y2="12" stroke-width="2" />
+                            </svg>
+                            AI Summary Generator</a></li>
+                </ul>
+            </section>
+
+        </section>
+
+        <footer class="flex justify-between px-5 py-2 bg-gray-50">
+            <section id="left-footer-section" class="flex items-center">
+                <img src="/images/change-region.png" alt="region-image" class="w-4 m-2" loading="lazy">
+                <select name="change-region" id="change-region" class="hover:text-blue-600 text-[13px]">
+                    <option value="change-region">change region</option>
+                </select>
+                <img src="/images/adobe-footer-image.jpg" alt="adobe-image" class="w-15 h-7 mx-2" loading="lazy">
+            </section>
+
+            <section id="right-footer-section" class="flex items-center">
+                <p class="text-[13px]">
+                    Copyright &copy; 2025 Adobe. All rights reserved./
+                    <a href="https://www.adobe.com/privacy.html" class="hover:text-blue-600">Privacy</a> /
+                    <a href="https://www.adobe.com/legal/terms.html" class="hover:text-blue-600">Terms of Use</a> /
+                    <a href="#" class="hover:text-blue-600">Cookie preferences</a> /
+                    <a href="https://www.adobe.com/privacy/location-specific-notice.html#how-to"
+                        class="hover:text-blue-600">Do not sell or share my
+                        personal information</a> /
+                <p class="text-[13px] flex items-center">
+                    <a href="https://www.adobe.com/privacy/opt-out.html#interest-based-ads"
+                        class="inline hover:text-blue-600 ">
+                        <img src="/images/adchoice.png" alt="adchoice-image" class="w-3.5 ml-1 inline hover:invert-100"
+                            loading="lazy">
+                        AdChoices
+                </p>
+                </a>
+                </p>
+            </section>
+        </footer>
+</body>
+<script src="script.js" defer></script>
+
+</html>
