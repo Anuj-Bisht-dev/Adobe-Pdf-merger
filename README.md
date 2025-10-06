@@ -6,11 +6,11 @@ Adobe PDF Merger is a **Node.js-based web application** that allows users to mer
 
 ## Tech Stack
 
-- **Backend:** Node.js + Express — Handles routing, file uploads, and PDF merging  
-- **File Upload:** Multer — Handles PDF uploads to the server  
-- **PDF Merging:** pdf-merger-js — Library used to merge multiple PDFs  
-- **CSS/UI:** Tailwind CSS — CLI-based setup with `src/input.css` compiled to `public/output.css`  
-- **Frontend:** HTML + CSS — Simple UI for uploading and merging PDFs  
+- **Backend:** Node.js + Express - Handles routing, file uploads, and PDF merging  
+- **File Upload:** Multer - Handles PDF uploads to the server  
+- **PDF Merging:** pdf-merger-js - Library used to merge multiple PDFs  
+- **CSS/UI:** Tailwind CSS - CLI-based setup with `src/input.css` compiled to `public/output.css`  
+- **Frontend:** HTML + CSS - Simple UI for uploading and merging PDFs  
 
 
 ## Project Structure
@@ -101,4 +101,5 @@ Open `http://localhost:3000` in your browser to use the application.
 5. Tailwind CSS is set up via CLI in watch mode for easy style customization during development.
 
 6. Project is structured to separate backend, frontend, uploads, and merged files clearly.
+
 
