@@ -15,7 +15,7 @@ Adobe PDF Merger is a **Node.js-based web application** that allows users to mer
 
 ## Project Structure
 
-```
+```bash
 Adobe-Pdf-merger/
 ├── server.js          # Main server entry point
 ├── package.json       # Dependencies and scripts
@@ -88,7 +88,7 @@ npm start
 Open `http://localhost:3000` in your browser to use the application.
 
 
-## Summary (in points)
+## Summary
 
 1. Complete PDF merging solution built with Node.js and Express for the backend.
 
@@ -101,3 +101,4 @@ Open `http://localhost:3000` in your browser to use the application.
 5. Tailwind CSS is set up via CLI in watch mode for easy style customization during development.
 
 6. Project is structured to separate backend, frontend, uploads, and merged files clearly.
+
