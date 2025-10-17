@@ -50,6 +50,7 @@ stars.forEach((star, index) => {
     star.addEventListener("mouseout", () => highlightStars(rating));
 });
 
+
 // Review Section
 const reviewSection = document.getElementById("review-section");
 const reviewSectionFieldset = document.getElementById("reviewSectionFieldset");
