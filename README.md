@@ -1,16 +1,30 @@
-# Adobe PDF Merger - Complete Project Details
+#  Adobe PDF Merger
 
-## Project Overview
+A simple and efficient **Node.js web application** that allows users to merge multiple PDF files into a single document directly from the browser.
 
-Adobe PDF Merger is a **Node.js-based web application** that allows users to merge multiple PDF files into a single PDF. It provides a simple browser-based UI for uploading PDFs, merges them on the server, and allows users to download the merged file. Tailwind CSS is used for styling the UI.
 
-## Tech Stack
 
-- **Backend:** Node.js + Express - Handles routing, file uploads, and PDF merging.
-- **File Upload:** Multer - Handles PDF uploads to the server.  
-- **PDF Merging:** pdf-merger-js - Library used to merge multiple PDFs.
-- **CSS/UI:** Tailwind CSS - CLI-based setup with `src/input.css` compiled to `public/output.css`. 
-- **Frontend:** HTML + CSS - Simple UI for uploading and merging PDFs. 
+## Features
+
+*  Upload multiple PDF files
+*  Merge PDFs into a single file
+*  Download merged PDF instantly
+*  Clean and responsive UI using Tailwind CSS
+*  Fast server-side processing with Node.js
+
+
+
+ ##  Tech Stack 🛠️
+
+| Technology        | Description                 |
+| ----------------- | --------------------------- |
+| **Node.js**       | Backend runtime             |
+| **Express.js**    | Web framework               |
+| **Multer**        | File upload handling        |
+| **pdf-merger-js** | PDF merging library         |
+| **Tailwind CSS**  | Utility-first CSS framework |
+| **HTML/CSS**      | Frontend UI                 |
+
 
 
 ## Project Structure
@@ -19,88 +33,132 @@ Adobe PDF Merger is a **Node.js-based web application** that allows users to mer
 Adobe-Pdf-merger/
 ├── server.js          # Main server entry point
 ├── package.json       # Dependencies and scripts
-├── package-lock.json  # Auto-generated lock file
-├── src/               # Source files for Tailwind
-│   └── input.css      # Tailwind directives
-├── public/            # Static files
+├── src/
+│   └── input.css      # Tailwind source file
+├── public/
 │   └── output.css     # Compiled Tailwind CSS
-├── uploads/           # Folder for user-uploaded PDFs
-├── merged/            # Folder where merged PDFs are saved
-└── views/             # HTML pages (if using templating)
-
-````
-
-
-## Dependencies
-
-- `express`: Web server  
-- `multer`: Handles file uploads  
-- `pdf-merger-js`: Merges PDFs  
-- `@tailwindcss/cli`: Compiles Tailwind CSS from `src/input.css` to `public/output.css`
+├── uploads/           # Uploaded PDFs
+├── merged/            # Merged PDF output
+└── views/             # HTML files (if applicable)
+```
 
 
 
-## Tailwind CSS Setup
+##  Installation & Setup
 
-- `src/input.css` contains:
+### step1:&nbsp; Clone the Repository
 
-```css
-@import 'tailwindcss';
-@tailwind utilities;
-````
+```bash
+git clone https://github.com/Anuj-Bisht-dev/Adobe-Pdf-merger.git
+cd Adobe-Pdf-merger
+```
 
-* Compiled to `public/output.css` using CLI with **watch mode**:
+### Step2:&nbsp; Install Dependencies
+
+```bash
+npm install
+```
+
+### Step3:&nbsp; Run Tailwind CSS (Watch Mode)
 
 ```bash
 npx tailwindcss -i ./src/input.css -o ./public/output.css --watch
 ```
 
-* HTML pages link to `/public/output.css`. Tailwind classes like `bg-blue-500`, `text-xl`, `p-4` can be used.
-
-✅ Tailwind is fully functional and recompiles automatically when `input.css` is modified.
-
-
-## How It Works (Flow)
-
-1. User opens the site (`http://localhost:3000`).
-2. User uploads multiple PDF files using the form.
-3. Server uses **Multer** to save PDFs in `/uploads`.
-4. Server uses **pdf-merger-js** to merge PDFs into one file.
-5. Merged PDF is saved in `/merged` folder and sent to user for download.
-
-
-## Commands to Run Locally
+### Step4:&nbsp; Start the Server
 
 ```bash
-# Clone the repo
-git clone https://github.com/Anuj-Bisht-dev/Adobe-Pdf-merger.git
-
-# Move to project folder
-cd Adobe-Pdf-merger
-
-# Install dependencies
-npm install
-
-# Start server
 npm start
 ```
 
-Open `http://localhost:3000` in your browser to use the application.
 
 
-## Summary
+## Usage
 
-1. Complete PDF merging solution built with Node.js and Express for the backend.
+1. Open your browser and go to:
 
-2. Uses Multer for file handling and pdf-merger-js for merging PDFs.
+```
+http://localhost:3000
+```
 
-3. Frontend styled with Tailwind CSS, providing a simple and responsive interface.
-
-4. Workflow: upload PDFs, merge on the server, and download the final merged file.
-
-5. Tailwind CSS is set up via CLI in watch mode for easy style customization during development.
-
-6. Project is structured to separate backend, frontend, uploads, and merged files clearly.
+2. Upload multiple PDF files
+3. Click **Merge**
+4. Download your merged PDF 
 
 
+
+## How It Works
+
+1. User uploads PDFs via the browser
+2. **Multer** stores files in `/uploads`
+3. **pdf-merger-js** merges the files
+4. Final PDF is saved in `/merged`
+5. File is sent back to the user for download
+
+
+
+## Tailwind CSS Setup
+
+* Source file: `src/input.css`
+
+```css
+@import 'tailwindcss';
+@tailwind utilities;
+```
+
+* Compile command:
+
+```bash
+npx tailwindcss -i ./src/input.css -o ./public/output.css --watch
+```
+
+* Output CSS is linked in HTML via:
+
+```html
+<link href="/public/output.css" rel="stylesheet">
+```
+
+
+
+##  Future Improvements
+
+* Drag & drop file upload
+* File preview before merging
+* Progress/loading indicator
+* Cloud storage support
+* Deploy on Vercel / Render
+
+
+
+## 🚀 Deployment
+
+You can deploy this project on:
+
+* Vercel (for frontend + serverless adaptation)
+* Render / Railway (recommended for Express backend)
+
+
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a new branch
+3. Make your changes
+4. Submit a Pull Request
+
+
+
+## Author
+
+**Anuj Singh Bisht**
+
+* GitHub: [https://github.com/Anuj-Bisht-dev](https://github.com/Anuj-Bisht-dev)
+
+
+
+## Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
 
