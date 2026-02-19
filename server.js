@@ -9,7 +9,8 @@ const upload = multer({ dest: 'uploads/' });
 
 // serve /public folder at /static
 app.use('/static', express.static('public'));
-const port = 3000;
+// const port = 3000;
+// uncomment if using in local host
 
 // Serve static files (CSS, JS, images, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -34,9 +35,23 @@ app.post('/merge', upload.array('pdfs', 12), async (req, res, next) => {
   // req.body will contain the text fields, if there were any
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`);
+// for run in local host
+// app.listen(port, () => {
+//   console.log(`Example app listening on port http://localhost:${port}`);
+// });
+
+// on while deploying
+app.post('/merge', upload.array('pdfs', 12), async (req, res) => {
+  const files = req.files.map(file => file.path);
+  const outputPath = '/tmp/merged.pdf';
+
+  await mergedPdfs(files, outputPath);
+
+  res.sendFile(outputPath);
 });
+
+module.exports = app;
+
 
 // then run (node server.js)
 // download (npx install -g nodemon)
