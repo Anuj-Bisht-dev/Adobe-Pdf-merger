@@ -12,10 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.13",
+    "@tailwindcss/vite": "^4.2.0",
     "express": "^5.1.0",
     "multer": "^2.0.2",
     "pdf-merger-js": "^5.1.2",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.2.0"
   }
 }
