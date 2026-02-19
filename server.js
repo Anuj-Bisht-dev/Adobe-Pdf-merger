@@ -1,5 +1,5 @@
 // to install express use (npm install express)
-// const express = require('express');
+const express = require('express');
 const path = require('path');
 const app = express();
 const multer = require('multer');
