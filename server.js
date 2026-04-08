@@ -32,7 +32,7 @@ app.post('/merge', upload.array('pdfs', 12), async (req, res, next) => {
   await mergedPdfs(files, outputPath); // merge all uploaded PDFs
   res.redirect('/static/merged.pdf'); // redirect to merged PDF in static folder
 
-  // res.send({data: req.files});
+  res.send({ data: req.files });
   // req.files is array of `photos` files
   // req.body will contain the text fields, if there were any
 })
