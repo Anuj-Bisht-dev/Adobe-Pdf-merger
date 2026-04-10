@@ -9,12 +9,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.0",
+    "@tailwindcss/vite": "^4.2.2",
     "express": "^5.2.1",
     "multer": "^2.0.2",
     "pdf-merger-js": "^5.1.2",
-    "tailwindcss": "^4.2.0"
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
   }
 }
